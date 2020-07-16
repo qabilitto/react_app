@@ -2,7 +2,7 @@ sudo: required
 servies:
     - docker
 before_install:
-    - docker build -f Dockerfile.dev -t test_ssr
+    - docker build -f Dockerfile.dev -t test_ssr .
 
 scripts:
     - docker run -e CI=true test_ssr npm run test
